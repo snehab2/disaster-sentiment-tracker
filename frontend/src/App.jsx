@@ -3,10 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+// Import library for charts 
+import { Chart as ChartJS } from "chart.js/auto";
+import { Bar, Doughnut, Line} from "react-chartjs-2";
 
-  return (
+// Import the data from another .json file
+import sourceData from "./data/sourceData.json";
+import PieChart from './pieChart';
+
+
+function App() {
+  //const [count, setCount] = useState(0)
+
+/*  return (
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -25,11 +34,20 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   </>
+
   )
+*/
+
+  
+    return (
+
+      <div className = "App">
+        Sentiment Trend
+        <div> <PieChart/> </div>
+      </div>
+    )
+  
 }
 
 export default App
