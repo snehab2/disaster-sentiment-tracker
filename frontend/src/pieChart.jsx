@@ -27,10 +27,23 @@ function pieChart(){
                     "rgba(234, 234, 234, 0.8)", 
                     "rgba(255, 202, 202, 0.8)", 
                   ]
-
                 },
               ],
           }}
+          options={{
+            plugins: {
+              tooltip: {
+                callbacks: {
+                  label: function (tooltipItem) {
+                    let label = tooltipItem.label || "";
+                    let value = tooltipItem.raw || 0;
+                    return ` ${value}%`; // Add the % sign
+                  },
+                },
+              },
+            },
+          }}
+          
         />
       </div>   
     )
