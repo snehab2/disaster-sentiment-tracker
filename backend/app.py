@@ -11,6 +11,9 @@ def home():
 if __name__ == "__main__":
     reset_db = "--reset-db" in sys.argv # optional argument to delete and repopulate raw_crisis_nlp_ table
 
+if __name__ == "__main__":
+    reset_db = "--reset-db" in sys.argv # optional argument to delete and repopulate raw_crisis_nlp_ table
+
     if reset_db:
         print("🔄 resetting and repopulating Raw_Crisis_NLP table...")
     else:
